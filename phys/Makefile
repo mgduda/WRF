@@ -246,7 +246,7 @@ include ../configure.wrf
 non_nmm : $(MODULES) $(FIRE_MODULES) $(WIND_MODULES) $(OBJS) $(DIAGNOSTIC_MODULES_EM) $(PHYSMMM_MODULES)
 
 physics_mmm:
-	(cd physics_mmm; ${MAKE} all)
+	(cd physics_mmm; ${MAKE} all HOST_MODEL=WRF)
 
 submodules :
 	@if [ \( ! -f module_sf_noahmpdrv.F \) -o \( ! -f module_sf_noahmp_glacier.F \) -o \
